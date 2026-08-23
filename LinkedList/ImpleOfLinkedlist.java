@@ -38,10 +38,8 @@ public class ImpleOfLinkedlist {
     public void InsertAtBetween(int data, int index) {
         if (index == 0) {
             InsertHead(data);
-            System.out.println("Insertion Successfull.....");
         } else if (index == index + 1) {
             InsertTail(data);
-            System.out.println("Insertion Successfull.....");
         } else {
             int counter = 0;
             Node<Integer> newNode = new Node(data);
@@ -53,6 +51,7 @@ public class ImpleOfLinkedlist {
             newNode.next = temp.next;
             temp.next = newNode;
         }
+        System.out.println("Insertion successfull.....");
     }
 
 }
