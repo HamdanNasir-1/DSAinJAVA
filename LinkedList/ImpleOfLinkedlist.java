@@ -1,32 +1,46 @@
 public class ImpleOfLinkedlist {
+    public static void main(String[] args) {
+        
+        ImpleOfLinkedlist obj = new ImpleOfLinkedlist();
 
-    
-
-
+        obj.InsertHead(56);
+        obj.InsertHead(33);
+        obj.InsertTail(67);
+        obj.InsertAtBetween(87, 1);
+        // obj.printList();
+        
+        
+        
+    }
     Node<Integer> head;
+    int size;
     ImpleOfLinkedlist() {
         this.head = null;
+        this.size=0;
     }
 
     public void InsertHead(int data) {
         Node<Integer> newNode = new Node(data);
 
         if (head == null) {
-            newNode = head;
+            head = newNode;
             System.out.println("Insertion Successfull.....");
+            // size++;
             return;
-
+            
         }
         newNode.next = head;
         head = newNode;
         System.out.println("Insertion Successfull.....");
+        size++;
     }
-
+    
     public void InsertTail(int data) {
         Node<Integer> newNode = new Node(data);
         if (head == null) {
-            newNode = head;
+            head = newNode;
             System.out.println("Insertion Successfull.....");
+            // size++;
             return;
         }
         Node<Integer> temp = head;
@@ -35,12 +49,13 @@ public class ImpleOfLinkedlist {
         }
         temp.next = newNode;
         System.out.println("Insertion Successfull.....");
+        size++;
     }
-
+    
     public void InsertAtBetween(int data, int index) {
         if (index == 0) {
             InsertHead(data);
-        } else if (index == index + 1) {
+        } else if (index == size + 1) {
             InsertTail(data);
         } else {
             int counter = 0;
@@ -54,9 +69,10 @@ public class ImpleOfLinkedlist {
             temp.next = newNode;
         }
         System.out.println("Insertion successfull.....");
+        size++;
     }
 
-    public void PrintList (){
+    public void printList (){
         Node<Integer> temp = head;
 
         while(temp!=null){
