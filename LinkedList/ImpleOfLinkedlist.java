@@ -17,7 +17,9 @@ public class ImpleOfLinkedlist {
             System.out.println("Insertion Successfull.....");
             return;
         }
-        
+        newNode.next = head;
+        head = newNode;
+        System.out.println("Insertion Successfull.....");
     }
 
 }
