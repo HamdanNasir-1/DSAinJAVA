@@ -1,7 +1,9 @@
 public class ImpleOfLinkedlist {
 
-    Node<Integer> head;
+    
 
+
+    Node<Integer> head;
     ImpleOfLinkedlist() {
         this.head = null;
     }
@@ -52,6 +54,15 @@ public class ImpleOfLinkedlist {
             temp.next = newNode;
         }
         System.out.println("Insertion successfull.....");
+    }
+
+    public void PrintList (){
+        Node<Integer> temp = head;
+
+        while(temp!=null){
+            System.out.println("This is data of list :"+temp.data);
+            temp = temp.next;
+        }
     }
 
 }
