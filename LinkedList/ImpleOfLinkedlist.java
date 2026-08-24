@@ -7,6 +7,7 @@ public class ImpleOfLinkedlist {
         obj.InsertHead(33);
         obj.InsertTail(67);
         obj.InsertAtBetween(87, 1);
+        obj.InsertAtBetween(87, 1);
         obj.InsertAtBetween(33, 2);
         obj.printList();
         
