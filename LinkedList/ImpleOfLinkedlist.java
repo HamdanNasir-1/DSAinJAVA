@@ -87,7 +87,7 @@ public class ImpleOfLinkedlist {
 class Node<T> {
     T data;
     Node next;
-skjd
+skj
     Node() {
         this.next = null;
     }
