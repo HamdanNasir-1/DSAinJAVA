@@ -7,7 +7,7 @@ public class ImpleOfLinkedlist {
         obj.InsertHead(33);
         obj.InsertTail(67);
         obj.InsertAtBetween(87, 1);
-        // obj.printList();
+        obj.printList();
         
         
         
@@ -25,7 +25,7 @@ public class ImpleOfLinkedlist {
         if (head == null) {
             head = newNode;
             System.out.println("Insertion Successfull.....");
-            // size++;
+            size++;
             return;
             
         }
@@ -40,7 +40,7 @@ public class ImpleOfLinkedlist {
         if (head == null) {
             head = newNode;
             System.out.println("Insertion Successfull.....");
-            // size++;
+            size++;
             return;
         }
         Node<Integer> temp = head;
@@ -80,6 +80,7 @@ public class ImpleOfLinkedlist {
             temp = temp.next;
         }
     }
+
 
 }
 
