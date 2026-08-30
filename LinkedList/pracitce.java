@@ -22,8 +22,8 @@ public class pracitce {
         System.out.println("Successfull insertion....");
         size++;
     }
-    //Insert at Tail/Last.....
-    
+    // Insert at Tail/Last.....
+
     public void InsertTail(int data) {
         Node<Integer> newNode = new Node();
 
@@ -44,6 +44,27 @@ public class pracitce {
         size++;
     }
 
+    public void InsertMiddle(int data, int index) {
+        if (index == 0) {
+            InsertHead(data);
+        } else if (index == size + 1) {
+            InsertTail(data);
+        } else {
+            int counter = 0;
+            Node<Integer> newNode = new Node();
+            Node<Integer> temp = head;
+            while (counter < index - 1 && temp != null) {
+                counter++;
+                temp = temp.next;
+            }
+            newNode.next = temp.next;
+            temp.next = newNode;
+        }
+        System.out.println("Successfull Insertion......");
+        size++;
+    }
+
+    
 
 }
 
