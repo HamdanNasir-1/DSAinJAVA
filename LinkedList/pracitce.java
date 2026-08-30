@@ -38,7 +38,8 @@ public class pracitce {
         while (temp.next != null) {
             temp = temp.next;
         }
-        
+        temp.next = newNode;
+        System.out.println("Successfull insertion .....");
     }
 }
 
