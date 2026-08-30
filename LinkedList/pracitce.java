@@ -80,7 +80,9 @@ public class pracitce {
         }
     }
 
-    
+    public void DeleteHead(){
+        
+    }
 
 }
 
