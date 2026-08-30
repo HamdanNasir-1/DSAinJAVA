@@ -66,7 +66,11 @@ public class pracitce {
 
     public void Print(){
         Node<Integer> newNode = head;
-        
+
+        while(newNode != null){
+            System.out.println("Data is -> "+newNode.data);
+            newNode = newNode.next;
+        }
     }
 
 }
