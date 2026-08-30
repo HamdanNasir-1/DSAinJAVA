@@ -64,7 +64,10 @@ public class pracitce {
         size++;
     }
 
-    
+    public void Print(){
+        Node<Integer> newNode = head;
+        
+    }
 
 }
 
