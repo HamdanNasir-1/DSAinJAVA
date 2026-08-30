@@ -7,6 +7,39 @@ public class pracitce {
         this.head = null;
         this.size = 0;
     }
+
+    // Insertion at first/Head**
+    public void InsertHead(int data) {
+        Node<Integer> newNode = new Node(data);
+
+        if (head == null) {
+            head = newNode;
+            System.out.println("Successfull insertion....");
+            size++;
+            return;
+        }
+        newNode.next = head;
+        System.out.println("Successfull insertion....");
+        size++;
+    }
+
+    public void InsertTail(int data) {
+        Node<Integer> newNode = new Node();
+
+        if (head == null) {
+            head = newNode;
+            System.out.println("Successfull insertion....");
+            size++;
+            return;
+        }
+
+        Node<Integer> temp = head;
+
+        while (temp.next != null) {
+            temp = temp.next;
+        }
+        
+    }
 }
 
 class Node<T> {
