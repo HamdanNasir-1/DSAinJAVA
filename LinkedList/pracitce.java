@@ -22,7 +22,8 @@ public class pracitce {
         System.out.println("Successfull insertion....");
         size++;
     }
-
+    //Insert at Tail/Last.....
+    
     public void InsertTail(int data) {
         Node<Integer> newNode = new Node();
 
@@ -40,7 +41,10 @@ public class pracitce {
         }
         temp.next = newNode;
         System.out.println("Successfull insertion .....");
+        size++;
     }
+
+
 }
 
 class Node<T> {
