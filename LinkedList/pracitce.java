@@ -1,8 +1,8 @@
 public class pracitce {
 
     public static void main(String[] args) {
-        
-        
+
+        pracitce pr = new pracitce();
 
     }
 
@@ -25,13 +25,14 @@ public class pracitce {
             return;
         }
         newNode.next = head;
+        head = newNode;
         System.out.println("Successfull insertion....");
         size++;
     }
     // Insert at Tail/Last.....
 
     public void InsertTail(int data) {
-        Node<Integer> newNode = new Node();
+        Node<Integer> newNode = new Node(data);
 
         if (head == null) {
             head = newNode;
@@ -57,7 +58,7 @@ public class pracitce {
             InsertTail(data);
         } else {
             int counter = 0;
-            Node<Integer> newNode = new Node();
+            Node<Integer> newNode = new Node(data);
             Node<Integer> temp = head;
             while (counter < index - 1 && temp != null) {
                 counter++;
@@ -70,20 +71,22 @@ public class pracitce {
         size++;
     }
 
-    public void Print(){
+    public void Print() {
         Node<Integer> newNode = head;
 
-        while(newNode != null){
-            System.out.println("Data is -> "+newNode.data);
+        while (newNode != null) {
+            System.out.println("Data is -> " + newNode.data);
             newNode = newNode.next;
         }
     }
+
+    
 
 }
 
 class Node<T> {
     T data;
-    Node next;
+    Node<T> next;
 
     public Node() {
 
